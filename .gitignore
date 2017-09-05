@@ -10,3 +10,4 @@ libs/
 *.iml
 build/
 *.log
+.DS_Store
