@@ -10,6 +10,7 @@ public class PageFactory extends org.openqa.selenium.support.PageFactory {
 
     public static LoginPage loginPage;
     public static LogoutPage logoutPage;
+    public static RegistrationPage registrationPage;
 
     @BeforeSuite
     public void init(){
@@ -17,6 +18,7 @@ public class PageFactory extends org.openqa.selenium.support.PageFactory {
 
         loginPage       = PageFactory.initElements(driver, LoginPage.class);
         logoutPage      = PageFactory.initElements(driver, LogoutPage.class);
+        registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
     }
 
 }
