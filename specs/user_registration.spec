@@ -10,3 +10,16 @@ New user registration
     |FirstName|LastName         |Phone|Email       |
     |---------|-----------------|-----|------------|
     |Gemunu   |Priyadarshana    |119  |abc@test.com|
+
+* Fill Mailing Information section
+    |Address1|Address2   |City  |State/Province|PostCode|Country    |
+    |--------|-----------|------|--------------|--------|-----------|
+    |151     |Isadin Town|Matara|Southern      |82600   |Sri Lanka  |
+
+
+Register a user using a concept step
+-------------------------------------
+* Register gem
+
+
+____
