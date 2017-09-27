@@ -13,6 +13,14 @@ public class RegistrationPage extends BasePage {
     @FindBy(how = How.XPATH, xpath = "//input[@name='lastName']")
     private WebElement lastNameText;
 
+    @FindBy(how = How.XPATH, xpath = "//input[@name='address1']")
+    private WebElement address1Text;
+
+    @FindBy(how = How.XPATH, xpath = "//input[@name='address2']")
+    private WebElement address2Text;
+
+
+
     public void visit(){
         driver.get(Url.concat("/mercuryregister.php"));
     }
@@ -25,5 +33,16 @@ public class RegistrationPage extends BasePage {
         lastNameText.sendKeys(lastName);
 
     }
+
+    public void fillMailingInformationSection(String address1, String address2, String city, String stateProvince, String postCode, String country){
+
+        address1Text.clear();
+        address1Text.sendKeys(address1);
+
+        address2Text.clear();
+        address2Text.sendKeys(address2);
+
+    }
+
 
 }

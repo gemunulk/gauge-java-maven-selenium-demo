@@ -11,7 +11,7 @@ public class RegistrationSpec {
     }
 
     @Step("Fill Contact Information section <table>")
-    public void implementation2(Table table){
+    public void implementation2(Table table) {
 
         for (TableRow row : table.getTableRows()) {
 
@@ -21,6 +21,25 @@ public class RegistrationSpec {
                     row.getCell("Phone"),
                     row.getCell("Email")
             );
+
+        }
+
+
+    }
+
+    @Step("Fill Mailing Information section <table>")
+    public void implementation3(Table table) {
+
+        for (TableRow row: table.getTableRows()){
+
+            PageFactory.registrationPage.fillMailingInformationSection(
+                    row.getCell("Address1"),
+                    row.getCell("Address2"),
+                    row.getCell("City"),
+                    row.getCell("State/Province"),
+                    row.getCell("PostCode"),
+                    row.getCell("Country")
+                    );
 
         }
 
