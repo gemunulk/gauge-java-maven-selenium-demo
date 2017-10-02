@@ -30,7 +30,7 @@ public class RegistrationSpec {
     @Step("Fill Mailing Information section <table>")
     public void implementation3(Table table) {
 
-        for (TableRow row: table.getTableRows()){
+        for (TableRow row : table.getTableRows()) {
 
             PageFactory.registrationPage.fillMailingInformationSection(
                     row.getCell("Address1"),
@@ -39,10 +39,15 @@ public class RegistrationSpec {
                     row.getCell("State/Province"),
                     row.getCell("PostCode"),
                     row.getCell("Country")
-                    );
+            );
 
         }
 
 
+    }
+
+    @Step("Submit user registration form")
+    public void implementation4() {
+        PageFactory.registrationPage.submitUserRegistrationFrom();
     }
 }

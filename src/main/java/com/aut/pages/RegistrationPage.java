@@ -3,6 +3,7 @@ package com.aut.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.Select;
 
 
 public class RegistrationPage extends BasePage {
@@ -18,6 +19,14 @@ public class RegistrationPage extends BasePage {
 
     @FindBy(how = How.XPATH, xpath = "//input[@name='address2']")
     private WebElement address2Text;
+
+    @FindBy(how = How.XPATH, xpath = "//select[@name='country']")
+    private WebElement countryDropdown;
+
+
+    @FindBy(how = How.XPATH, xpath = "//input[@name='register']")
+    private WebElement submitButton;
+
 
 
 
@@ -41,6 +50,15 @@ public class RegistrationPage extends BasePage {
 
         address2Text.clear();
         address2Text.sendKeys(address2);
+
+        Select selectCountry = new Select(countryDropdown);
+        selectCountry.selectByVisibleText(country);
+    }
+
+    public void submitUserRegistrationFrom(){
+
+        submitButton.click();
+
 
     }
 
